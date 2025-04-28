@@ -2,13 +2,12 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta2
 kind: HelmRelease
 metadata:
-  name: nginx
-  namespace: openstack    # <- Flux will manage this HelmRelease in openstack namespace
+  name: ingress-nginx      # <-- FIXED
+  namespace: openstack
 spec:
   releaseName: ingress-nginx
-  targetNamespace: openstack   # <- Helm will install resources into openstack namespace
+  targetNamespace: openstack
   interval: 1h
-
   chart:
     spec:
       chart: ingress-nginx
@@ -16,8 +15,8 @@ spec:
       interval: 5h
       sourceRef:
         kind: HelmRepository
-        name: nginx 
-        namespace: flux-system
+        name: ingress-nginx
+        namespace: flux-system   # <-- FIXED (pull from flux-system)
 
   values:
     controller:
