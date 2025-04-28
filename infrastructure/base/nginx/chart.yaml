@@ -4,7 +4,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmChart
 metadata:
   name: ingress-nginx
-  namespace: openstack
+  namespace: flux-system
 spec:
   chart: nginx-ingress
   version: 1.2.x
