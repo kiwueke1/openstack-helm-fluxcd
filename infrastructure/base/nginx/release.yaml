@@ -2,7 +2,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta2
 kind: HelmRelease
 metadata:
-  name: ingress-nginx
+  name: nginx
   namespace: openstack    # <- Flux will manage this HelmRelease in openstack namespace
 spec:
   releaseName: ingress-nginx

@@ -3,3 +3,4 @@
 resources:
   - "./nginx"
   - "./openstack-namespace"
+  - "./metallb"
