@@ -4,3 +4,4 @@ resources:
   - "./nginx"
   - "./openstack-namespace"
   - "./metallb"
+  - "./metallb/ipconfigs"
