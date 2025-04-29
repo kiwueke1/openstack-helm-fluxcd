@@ -11,5 +11,3 @@ spec:
     kind: GitRepository
     name: flux-system
   targetNamespace: rook-ceph
-  dependsOn:
-    - name: infrastructure
