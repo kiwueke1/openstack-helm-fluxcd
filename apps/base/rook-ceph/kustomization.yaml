@@ -1,0 +1,12 @@
+resources:
+  - crds.yaml
+ # - operator.yaml
+  - toolbox.yaml
+  - storageclass.yaml
+  - general-storageclass.yaml
+  - cluster.yaml
+  - common.yaml
+  - repository.yaml
+  - release.yaml
+  - values-configmap.yaml
+
