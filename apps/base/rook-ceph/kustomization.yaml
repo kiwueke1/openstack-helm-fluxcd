@@ -1,6 +1,6 @@
 resources:
   - crds.yaml
- # - operator.yaml
+  - operator.yaml
   - toolbox.yaml
   - storageclass.yaml
   - general-storageclass.yaml
