@@ -2,6 +2,7 @@ resources:
 #  - crds.yaml
   - repository.yaml
   - release.yaml
+  - namespace.yaml
 #  - https://raw.githubusercontent.com/rook/rook/v1.12.11/deploy/examples/crds.yaml
 #  - https://raw.githubusercontent.com/rook/rook/v1.12.11/deploy/examples/operator.yaml
 #  - https://raw.githubusercontent.com/rook/rook/v1.12.11/deploy/examples/toolbox.yaml
