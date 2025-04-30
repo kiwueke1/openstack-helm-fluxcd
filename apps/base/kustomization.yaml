@@ -3,3 +3,4 @@ resources:
   - openstack-ingress-service/
   - rook-ceph/
   - ceph-adapter-rook/
+  - node-init/

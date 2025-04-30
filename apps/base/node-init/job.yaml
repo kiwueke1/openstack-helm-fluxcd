@@ -1,0 +1,55 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: node-init-labels-and-taints
+  namespace: kube-system
+spec:
+  template:
+    spec:
+      containers:
+      - name: kubectl
+        image: bitnami/kubectl:latest
+        command:
+        - /bin/sh
+        - -c
+        - |
+          echo "Labeling nodes for OpenStack..."
+          kubectl label --overwrite nodes --all openstack-control-plane=enabled
+          kubectl label --overwrite nodes --all openstack-compute-node=enabled
+          kubectl label --overwrite nodes --all openvswitch=enabled
+          kubectl label --overwrite nodes --all linuxbridge=enabled
+
+          echo "Removing taints from control-plane nodes..."
+          kubectl taint nodes -l 'node-role.kubernetes.io/control-plane' node-role.kubernetes.io/control-plane- || true
+        env:
+        - name: KUBECONFIG
+          value: /etc/kubernetes/admin.conf
+        volumeMounts:
+        - name: kubeconfig
+          mountPath: /etc/kubernetes
+      restartPolicy: OnFailure
+      serviceAccountName: node-admin
+      volumes:
+      - name: kubeconfig
+        hostPath:
+          path: /etc/kubernetes
+          type: Directory
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: node-admin
+  namespace: kube-system
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: node-admin-binding
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: node-admin
+  namespace: kube-system
