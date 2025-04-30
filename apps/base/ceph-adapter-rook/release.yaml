@@ -19,4 +19,4 @@ spec:
       configmap_templates: true
       configmap_etc: false
       job_storage_admin_keys: true
-      job_namespace_client_key: false
+      job_namespace_client_key: false 
