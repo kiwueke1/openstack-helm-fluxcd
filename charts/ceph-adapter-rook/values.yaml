@@ -69,3 +69,4 @@ manifests:
   job_namespace_client_ceph_config: true
   job_namespace_client_key: true
 ...
+
