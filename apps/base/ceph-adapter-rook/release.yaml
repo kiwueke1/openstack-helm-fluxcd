@@ -1,0 +1,22 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: ceph-adapter-rook
+  namespace: openstack
+spec:
+  chart:
+    spec:
+      chart: ./charts/ceph-adapter-rook
+      sourceRef:
+        kind: GitRepository
+        name: openstack-helm-fluxcd
+        namespace: flux-system
+  interval: 5m
+  values:
+    namespace: rook-ceph
+    manifests:
+      configmap_bin: true
+      configmap_templates: true
+      configmap_etc: false
+      job_storage_admin_keys: true
+      job_namespace_client_key: false

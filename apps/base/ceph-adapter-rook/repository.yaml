@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: openstack-helm-fluxcd
+  namespace: flux-system
+spec:
+  interval: 5m
+  url: https://github.com/kiwueke1/openstack-helm-fluxcd.git
+  ref:
+    branch: main

@@ -2,3 +2,4 @@ resources:
   - metallb-config/
   - openstack-ingress-service/
   - rook-ceph/
+  - ceph-adapter-rook/
