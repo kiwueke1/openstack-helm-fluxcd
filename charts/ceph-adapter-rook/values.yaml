@@ -45,7 +45,7 @@ pod:
           cpu: "500m"
 
 
-ceph_cluster_namespace: ceph
+ceph_cluster_namespace: rook-ceph
 
 secret_name: pvc-ceph-client-key
 configmap_name: ceph-etc
