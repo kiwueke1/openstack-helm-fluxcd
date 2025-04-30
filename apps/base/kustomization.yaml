@@ -6,3 +6,4 @@ resources:
   - node-init/
   - rabbitmq/
   - mariadb/
+  - memecached/
