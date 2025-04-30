@@ -7,3 +7,4 @@ resources:
   - rabbitmq/
   - mariadb/
   - memecached/
+  - keystone/
