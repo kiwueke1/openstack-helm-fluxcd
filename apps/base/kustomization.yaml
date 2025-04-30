@@ -5,3 +5,4 @@ resources:
   - ceph-adapter-rook/
   - node-init/
   - rabbitmq/
+  - mariadb/
