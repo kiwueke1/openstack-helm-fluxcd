@@ -9,3 +9,4 @@ resources:
   - memecached/
   - keystone/
   - heat/
+  - glance/
