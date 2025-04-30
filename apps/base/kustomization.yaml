@@ -8,3 +8,4 @@ resources:
   - mariadb/
   - memecached/
   - keystone/
+  - heat/
