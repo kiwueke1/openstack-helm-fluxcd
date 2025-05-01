@@ -10,3 +10,4 @@ resources:
   - keystone/
   - heat/
   - glance/
+  - cinder/
