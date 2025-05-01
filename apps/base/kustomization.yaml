@@ -14,5 +14,6 @@ resources:
 #  - ceph-configmap-updater
   - openvswitch/
   - libvirt/
+  - placement/
 
 
