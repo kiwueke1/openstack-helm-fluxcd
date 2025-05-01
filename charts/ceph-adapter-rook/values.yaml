@@ -54,7 +54,7 @@ conf:
   ceph:
     global:
       # TODO: Get mon host from rook-ceph-mon-endpoints configmap
-      mon_host: "will be discovered"
+      mon_host: "10.233.32.123:6789,10.233.11.6:6789,10.233.49.66:6789"
 
 dependencies:
   static:
