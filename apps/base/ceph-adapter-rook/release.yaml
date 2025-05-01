@@ -17,6 +17,6 @@ spec:
     manifests:
       configmap_bin: true
       configmap_templates: true
-      configmap_etc: false
+      configmap_etc: true
       job_storage_admin_keys: true
-      job_namespace_client_key: false 
+      job_namespace_client_key: true 
