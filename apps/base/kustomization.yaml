@@ -2,7 +2,7 @@ resources:
   - metallb-config/
   - openstack-ingress-service/
   - rook-ceph/
-#  - ceph-adapter-rook/
+  - ceph-adapter-rook/
   - node-init/
   - rabbitmq/
   - mariadb/
