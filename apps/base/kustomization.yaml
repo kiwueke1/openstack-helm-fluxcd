@@ -12,5 +12,6 @@ resources:
   - glance/
   - cinder/
 #  - ceph-configmap-updater
+  - openvswitch/
 
 
