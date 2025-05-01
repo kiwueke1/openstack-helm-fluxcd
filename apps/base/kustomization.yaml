@@ -13,5 +13,6 @@ resources:
   - cinder/
 #  - ceph-configmap-updater
   - openvswitch/
+  - libvirt/
 
 
