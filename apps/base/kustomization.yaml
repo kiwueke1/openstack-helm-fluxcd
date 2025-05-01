@@ -10,7 +10,7 @@ resources:
   - keystone/
   - heat/
   - glance/
-  - cinder/
+#  - cinder/
 #  - ceph-configmap-updater
 
 
