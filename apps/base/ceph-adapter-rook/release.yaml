@@ -14,9 +14,13 @@ spec:
   interval: 5m
   values:
     namespace: rook-ceph
+    conf:
+      ceph:
+        global:
+          mon_host: "10.233.66.25:6789,10.233.65.213:6789,10.233.64.233:6789"
     manifests:
       configmap_bin: true
       configmap_templates: true
       configmap_etc: true
       job_storage_admin_keys: true
-      job_namespace_client_key: true 
+      job_namespace_client_key: true
