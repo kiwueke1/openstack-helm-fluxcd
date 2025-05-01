@@ -15,6 +15,3 @@ spec:
         namespace: flux-system
       version: "2025.1.0"
   timeout: 15m
-  valuesFrom:
-    - kind: ConfigMap
-      name: cinder-values
