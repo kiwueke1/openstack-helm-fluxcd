@@ -1,0 +1,3 @@
+resources:
+  - release.yaml
+  - neutron-values-cm.yaml

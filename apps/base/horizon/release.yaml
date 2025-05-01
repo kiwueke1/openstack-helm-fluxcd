@@ -1,0 +1,17 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: horizon
+  namespace: openstack
+spec:
+  releaseName: horizon
+  interval: 5m
+  chart:
+    spec:
+      chart: ./charts/horizon
+      sourceRef:
+        kind: GitRepository
+        name: openstack-helm-fluxcd
+        namespace: flux-system
+      version: "2025.1.0"
+  timeout: 10m

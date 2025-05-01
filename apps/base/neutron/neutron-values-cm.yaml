@@ -1,0 +1,22 @@
+apiVersion: v1
+data:
+  values.yaml: |
+    conf:
+      neutron:
+        DEFAULT:
+          l3_ha: False
+          max_l3_agents_per_router: 1
+      auto_bridge_add:
+        br-ex: ens20
+      plugins:
+        ml2_conf:
+          ml2_type_flat:
+            flat_networks: public
+        openvswitch_agent:
+          ovs:
+            bridge_mappings: public:br-ex
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: neutron-values
+  namespace: openstack
