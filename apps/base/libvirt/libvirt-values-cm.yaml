@@ -1,23 +1,11 @@
 apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: libvirt-values
-  namespace: openstack
 data:
   values.yaml: |
     conf:
       ceph:
         enabled: true
-    pod:
-      mounts:
-        libvirt:
-          libvirt:
-            volumeMounts:
-              - name: machine-id
-                mountPath: /etc/machine-id
-                subPath: machine-id
-            volumes:
-              - name: machine-id
-                hostPath:
-                  path: /etc/machine-id
-                  type: File
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: libvirt-values
+  namespace: openstack
