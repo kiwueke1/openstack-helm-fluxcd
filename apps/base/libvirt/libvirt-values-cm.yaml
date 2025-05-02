@@ -4,25 +4,7 @@ data:
     conf:
       ceph:
         enabled: true
-
-    pod:
-      mounts:
-        libvirt:
-          libvirt:
-            volumeMounts:
-              - name: machine-id
-                mountPath: /etc/machine-id
-                subPath: machine-id
-                readOnly: true
-          init_container: null
-      volumes:
-        libvirt:
-          libvirt:
-            volumes:
-              - name: machine-id
-                hostPath:
-                  path: /etc/machine-id
-                  type: File
+kind: ConfigMap
 metadata:
   creationTimestamp: null
   name: libvirt-values
