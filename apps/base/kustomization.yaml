@@ -13,11 +13,11 @@ resources:
   - cinder/
 #  - ceph-configmap-updater
   - openvswitch/
-  - libvirt/
-  - placement/
-  - nova/
-  - neutron/
-  - horizon/
+#  - libvirt/
+#  - placement/
+#  - nova/
+#  - neutron/
+#  - horizon/
 
 
 
