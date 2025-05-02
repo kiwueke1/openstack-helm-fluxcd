@@ -1,6 +1,11 @@
 apiVersion: v1
 data:
   values.yaml: |
+    bootstrap:
+      enabled: true
+      ks_user: neutron
+      script: |
+        openstack token issue
     conf:
       neutron:
         DEFAULT:
@@ -17,6 +22,5 @@ data:
             bridge_mappings: public:br-ex
 kind: ConfigMap
 metadata:
-  creationTimestamp: null
   name: neutron-values
   namespace: openstack
