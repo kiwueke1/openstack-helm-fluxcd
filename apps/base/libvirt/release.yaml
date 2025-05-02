@@ -13,7 +13,7 @@ spec:
         kind: GitRepository
         name: openstack-helm-fluxcd
         namespace: flux-system
-      version: "2025.1.0"
+      version: "2024.1.0"
   timeout: 10m
   valuesFrom:
     - kind: ConfigMap
