@@ -152,7 +152,7 @@ network:
       port: 30096
 
 bootstrap:
-  enabled: false
+  enabled: true
   ks_user: neutron
   script: |
     openstack token issue
