@@ -15,8 +15,8 @@ resources:
   - openvswitch/
   - libvirt/
   - placement/
-  - nova/
-  - neutron/
-  - horizon/
+#  - nova/
+#  - neutron/
+#  - horizon/
 
 
