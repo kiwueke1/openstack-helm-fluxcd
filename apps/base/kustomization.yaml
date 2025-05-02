@@ -16,8 +16,8 @@ resources:
   - libvirt/
   - placement/
   - nova/
-#  - neutron/
-#  - horizon/
+  - neutron/
+  - horizon/
 
 
 
