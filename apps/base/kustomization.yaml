@@ -13,7 +13,7 @@ resources:
   - cinder/
 #  - ceph-configmap-updater
   - openvswitch/
-  - libvirt/
+#  - libvirt/
   - placement/
   - nova/
   - neutron/
