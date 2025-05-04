@@ -1,0 +1,31 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ceph-configmap-updater
+  namespace: openstack
+spec:
+  template:
+    spec:
+      serviceAccountName: default
+      restartPolicy: OnFailure
+      containers:
+      - name: updater
+        image: bitnami/kubectl:1.27
+        command:
+          - /bin/sh
+          - -c
+          - |
+            set -ex
+            MONS=$(kubectl get configmap -n rook-ceph rook-ceph-mon-endpoints -o jsonpath="{.data['csi-cluster-config-json']}" | jq -r '.[0].monitors | join(",")')
+            echo "[global]\nmon_host = ${MONS}" > /tmp/ceph.conf
+
+            cat <<EOF | kubectl apply -f -
+            apiVersion: v1
+            kind: ConfigMap
+            metadata:
+              name: ceph-etc
+              namespace: openstack
+            data:
+              ceph.conf: |
+$(cat /tmp/ceph.conf | sed 's/^/                /')
+            EOF
