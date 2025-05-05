@@ -19,13 +19,13 @@ spec:
             MONS=$(kubectl get configmap -n rook-ceph rook-ceph-mon-endpoints -o jsonpath="{.data['csi-cluster-config-json']}" | jq -r '.[0].monitors | join(",")')
             echo "[global]\nmon_host = ${MONS}" > /tmp/ceph.conf
 
-            cat <<EOF | kubectl apply -f -
-            apiVersion: v1
-            kind: ConfigMap
-            metadata:
-              name: ceph-etc
-              namespace: openstack
-            data:
-              ceph.conf: |
-$(cat /tmp/ceph.conf | sed 's/^/                /')
-            EOF
+            echo "apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ceph-etc
+  namespace: openstack
+data:
+  ceph.conf: |
+$(sed 's/^/    /' /tmp/ceph.conf)" > /tmp/ceph-configmap.yaml
+
+            kubectl apply -f /tmp/ceph-configmap.yaml
