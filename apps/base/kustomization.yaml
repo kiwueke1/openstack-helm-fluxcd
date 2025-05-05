@@ -11,7 +11,7 @@ resources:
 #  - heat/
 #  - glance/
 #  - cinder/
-  - ceph-configmap-updater
+#  - ceph-configmap-updater
 #  - openvswitch/
 #  - libvirt/
 #  - placement/
