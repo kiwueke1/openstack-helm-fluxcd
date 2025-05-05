@@ -8,8 +8,8 @@ resources:
   - mariadb/
   - memecached/
   - keystone/
-#  - heat/
-#  - glance/
+  - heat/
+  - glance/
 #  - cinder/
 #  - ceph-configmap-updater
 #  - openvswitch/
