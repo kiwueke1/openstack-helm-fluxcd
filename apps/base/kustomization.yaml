@@ -5,8 +5,8 @@ resources:
   - ceph-adapter-rook/
   - node-init/
   - rabbitmq/
-#  - mariadb/
-#  - memecached/
+  - mariadb/
+  - memecached/
 #  - keystone/
 #  - heat/
 #  - glance/
