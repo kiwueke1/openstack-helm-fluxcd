@@ -4,6 +4,12 @@ data:
     conf:
       ceph:
         enabled: true
+      libvirt:
+        virt_type: qemu
+        cpu_mode: none
+    bootstrap:
+      wait_for_computes:
+        enabled: true
 kind: ConfigMap
 metadata:
   creationTimestamp: null
