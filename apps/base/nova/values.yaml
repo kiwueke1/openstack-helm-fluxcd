@@ -1,7 +1,3 @@
-bootstrap:
-  wait_for_computes:
-    enabled: true
-
 conf:
   ceph:
     enabled: true
