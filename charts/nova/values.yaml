@@ -1491,6 +1491,8 @@ conf:
       send_service_user_token: true
     libvirt:
       connection_uri: "qemu+unix:///system?socket=/run/libvirt/libvirt-sock"
+      virt_type: qemu
+      cpu_mode: none
       images_type: qcow2
       images_rbd_pool: vms
       images_rbd_ceph_conf: /etc/ceph/ceph.conf
