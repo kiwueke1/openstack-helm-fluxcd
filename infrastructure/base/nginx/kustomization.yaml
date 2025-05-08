@@ -1,6 +1,9 @@
 
 
 resources:
-  - "repository.yaml"
-  - "release.yaml"
+  - repository.yaml
+  - ingress-nginx-cluster.yaml
+  - ingress-nginx-openstack.yaml
+  - ingress-nginx-ceph.yaml
+
   

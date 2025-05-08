@@ -1,0 +1,30 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: ingress-nginx-ceph
+  namespace: ceph
+spec:
+  interval: 10m
+  chart:
+    spec:
+      chart: ingress-nginx
+      version: 4.8.3
+      sourceRef:
+        kind: HelmRepository
+        name: ingress-nginx
+        namespace: flux-system
+  values:
+    controller:
+      admissionWebhooks:
+        enabled: false
+      kind: DaemonSet
+      service:
+        enabled: false
+      scope:
+        enabled: true
+      ingressClassResource:
+        name: nginx-ceph
+        controllerValue: k8s.io/ingress-nginx-ceph
+      ingressClass: nginx-ceph
+      labels:
+        app: ingress-api

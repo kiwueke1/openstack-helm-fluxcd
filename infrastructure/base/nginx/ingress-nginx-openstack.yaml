@@ -1,36 +1,30 @@
-# infrastructure/base/nginx/release.yaml
 apiVersion: helm.toolkit.fluxcd.io/v2beta2
 kind: HelmRelease
 metadata:
-  name: ingress-nginx 
+  name: ingress-nginx-openstack
   namespace: openstack
 spec:
-  releaseName: ingress-nginx
-  targetNamespace: openstack
-  interval: 1h
+  interval: 10m
   chart:
     spec:
       chart: ingress-nginx
       version: 4.8.3
-      interval: 5h
       sourceRef:
         kind: HelmRepository
         name: ingress-nginx
         namespace: flux-system
-
   values:
     controller:
-      kind: Deployment
       admissionWebhooks:
+        enabled: false
+      kind: DaemonSet
+      service:
         enabled: false
       scope:
         enabled: true
-      service:
-        enabled: false
       ingressClassResource:
         name: nginx
-        controllerValue: "k8s.io/ingress-nginx"
-        default: false
+        controllerValue: k8s.io/ingress-nginx-openstack
       ingressClass: nginx
       labels:
         app: ingress-api
