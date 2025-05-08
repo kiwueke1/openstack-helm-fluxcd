@@ -4,7 +4,7 @@ metadata:
   name: public-openstack
   namespace: openstack
   annotations:
-    metallb.universe.tf/loadBalancerIPs: "10.10.11.50"
+    metallb.universe.tf/loadBalancerIPs: "10.10.31.50"
 spec:
   externalTrafficPolicy: Cluster
   type: LoadBalancer
@@ -15,4 +15,6 @@ spec:
       port: 80
     - name: https
       port: 443
+
+
 
