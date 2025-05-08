@@ -4,4 +4,4 @@ resources:
 - gotk-components.yaml
 - gotk-sync.yaml
 #- ../../../infrastructure/staging
-- ../../../apps/staging
+#- ../../../apps/staging
