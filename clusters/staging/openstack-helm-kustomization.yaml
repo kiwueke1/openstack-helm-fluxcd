@@ -9,4 +9,4 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: openstack-helm
+    name: openstack-helm-fluxcd
