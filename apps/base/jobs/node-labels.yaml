@@ -1,0 +1,30 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: apply-node-labels
+  namespace: kube-system
+spec:
+  template:
+    spec:
+      containers:
+      - name: kubectl
+        image: bitnami/kubectl:latest
+        command:
+        - /bin/sh
+        - -c
+        - |
+          kubectl label --overwrite namespace default name=default
+          kubectl label --overwrite namespace kube-system name=kube-system
+          kubectl label --overwrite namespace kube-public name=kube-public
+          kubectl label --overwrite nodes --all openstack-control-plane=enabled
+          kubectl label --overwrite nodes --all openstack-compute-node=enabled
+          kubectl label --overwrite nodes --all openvswitch=enabled
+          kubectl label --overwrite nodes --all linuxbridge=enabled
+          kubectl label --overwrite nodes --all ceph-mon=enabled
+          kubectl label --overwrite nodes --all ceph-osd=enabled
+          kubectl label --overwrite nodes --all ceph-mds=enabled
+          kubectl label --overwrite nodes --all ceph-rgw=enabled
+          kubectl label --overwrite nodes --all ceph-mgr=enabled
+          kubectl label --overwrite nodes -l "node-role.kubernetes.io/control-plane" l3-agent=enabled
+          kubectl label --overwrite nodes -l "node-role.kubernetes.io/control-plane" openstack-network-node=enabled
+      restartPolicy: OnFailure
