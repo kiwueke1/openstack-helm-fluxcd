@@ -3,5 +3,5 @@ kind: Kustomization
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
-- ../../../infrastructure/staging
+#- ../../../infrastructure/staging
 - ../../../apps/staging
