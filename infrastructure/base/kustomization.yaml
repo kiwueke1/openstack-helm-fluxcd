@@ -4,3 +4,4 @@ resources:
 #  - "./openstack-namespace"
 #  - "./metallb"
   - "./nginx"
+  - ./rook
