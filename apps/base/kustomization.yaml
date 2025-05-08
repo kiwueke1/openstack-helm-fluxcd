@@ -1,22 +1,21 @@
 resources:
-#  - metallb-config/
-  - openstack-ingress-service/
-  - rook-ceph/
-  - ceph-adapter-rook/
-  - node-init/
-  - rabbitmq/
-  - mariadb/
-  - memecached/
-  - keystone/
-  - heat/
-  - glance/
-  - cinder/
-#  - ceph-configmap-updater
-  - openvswitch/
-  - libvirt/
-  - placement/
-  - nova/
-  - neutron/
-  - horizon/
+#  - openstack-ingress-service/
+#  - rook-ceph/
+#  - ceph-adapter-rook/
+#  - node-init/
+#  - rabbitmq/
+#  - mariadb/
+#  - memecached/
+#  - keystone/
+#  - heat/
+#  - glance/
+#  - cinder/
+#  - openvswitch/
+#  - libvirt/
+#  - placement/
+#  - nova/
+#  - neutron/
+#  - horizon/
+
 
 
