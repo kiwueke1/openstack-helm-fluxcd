@@ -7,12 +7,12 @@ spec:
   interval: 10m
   chart:
     spec:
-      chart: rook-ceph
-      version: 1.16.6
+      chart: ./charts/rook-ceph
       sourceRef:
-        kind: HelmRepository
-        name: rook-release
+        kind: GitRepository
+        name: openstack-helm-fluxcd
         namespace: flux-system
+      interval: 1m
   valuesFrom:
     - kind: ConfigMap
       name: rook-ceph-operator-values
