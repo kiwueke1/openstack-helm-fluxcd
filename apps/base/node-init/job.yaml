@@ -19,8 +19,8 @@ spec:
           kubectl label --overwrite nodes --all openvswitch=enabled
           kubectl label --overwrite nodes --all linuxbridge=enabled
 
-          echo "Removing taints from control-plane nodes..."
-          kubectl taint nodes -l 'node-role.kubernetes.io/control-plane' node-role.kubernetes.io/control-plane- || true
+          echo "Removing taint from control-plane nodes (node-role.kubernetes.io/control-plane:NoSchedule)..."
+          kubectl taint nodes -l 'node-role.kubernetes.io/control-plane' node-role.kubernetes.io/control-plane:NoSchedule- || true
         env:
         - name: KUBECONFIG
           value: /etc/kubernetes/admin.conf
