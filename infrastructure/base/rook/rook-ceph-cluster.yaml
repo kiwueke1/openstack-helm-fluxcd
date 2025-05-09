@@ -3,6 +3,8 @@ kind: HelmRelease
 metadata:
   name: rook-ceph-cluster
   namespace: ceph
+  annotations:
+    fluxcd.io/redeploy-at: "2025-05-09-13-55"  # <-- add this line
 spec:
   interval: 10m
   chart:
