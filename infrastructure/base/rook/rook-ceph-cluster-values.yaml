@@ -74,9 +74,6 @@ data:
           dataSource: zero
           iteration: 1
         allowUninstallWithVolumes: false
-      monitoring:
-        enabled: false
-        metricsDisabled: true
       removeOSDsIfOutAndSafeToRemove: false
       priorityClassNames:
         mon: system-node-critical
