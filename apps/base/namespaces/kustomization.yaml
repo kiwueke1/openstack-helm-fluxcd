@@ -1,6 +1,6 @@
 resources:
-  - ceph.yaml
+#  - ceph.yaml
   - openstack.yaml
   - osh-infra.yaml
-  - rook-ceph.yaml
+#  - rook-ceph.yaml
   
