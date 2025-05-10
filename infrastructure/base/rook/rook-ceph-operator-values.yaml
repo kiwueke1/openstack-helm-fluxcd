@@ -5,6 +5,8 @@ metadata:
   namespace: rook-ceph
 data:
   values.yaml: |
+    operatorNamespace: rook-ceph
+    clusterNamespace: ceph
     image:
       repository: rook/ceph
       tag: v1.16.6
