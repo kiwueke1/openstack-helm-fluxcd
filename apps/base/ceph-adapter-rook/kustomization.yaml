@@ -1,4 +1,4 @@
 # apps/base/ceph-adapter-rook/kustomization.yaml
 resources:
-  - release.yaml
+#  - release.yaml
   - repository.yaml
