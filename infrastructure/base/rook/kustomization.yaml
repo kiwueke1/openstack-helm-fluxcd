@@ -1,6 +1,0 @@
-resources:
-  - helmrepository.yaml
-  - rook-ceph-operator-values.yaml
-  - rook-ceph-cluster-values.yaml
-  - rook-ceph-operator.yaml
-  - rook-ceph-cluster.yaml
