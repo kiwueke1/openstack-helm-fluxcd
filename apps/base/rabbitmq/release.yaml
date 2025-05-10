@@ -6,6 +6,7 @@ metadata:
 spec:
   releaseName: rabbitmq
   interval: 5m
+  timeout: 10m
   chart:
     spec:
       chart: ./charts/rabbitmq
@@ -14,4 +15,11 @@ spec:
         name: openstack-helm-fluxcd
         namespace: flux-system
       version: 2025.1.0
-  timeout: 10m
+  values:
+    pod:
+      replicas:
+        server: 1
+    volume:
+      enabled: false
+      use_local_path:
+        enabled: true
