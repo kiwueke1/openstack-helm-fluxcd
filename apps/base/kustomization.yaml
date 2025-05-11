@@ -12,7 +12,7 @@ resources:
   - keystone/
   - heat/
   - glance/
-#  - cinder/
+  - cinder/
 #  - openvswitch/
 #  - libvirt/
 #  - placement/
