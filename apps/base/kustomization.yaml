@@ -15,7 +15,7 @@ resources:
   - cinder/
   - openvswitch/
   - libvirt/
-#  - placement/
+  - placement/
 #  - nova/
 #  - neutron/
 #  - horizon/
