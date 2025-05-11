@@ -14,7 +14,7 @@ resources:
   - glance/
   - cinder/
   - openvswitch/
-#  - libvirt/
+  - libvirt/
 #  - placement/
 #  - nova/
 #  - neutron/
