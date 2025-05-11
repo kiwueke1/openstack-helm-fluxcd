@@ -13,7 +13,7 @@ resources:
   - heat/
   - glance/
   - cinder/
-#  - openvswitch/
+  - openvswitch/
 #  - libvirt/
 #  - placement/
 #  - nova/
