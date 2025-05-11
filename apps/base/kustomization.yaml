@@ -13,9 +13,9 @@ resources:
   - heat/
   - glance/
   - cinder/
-#  - openvswitch/
-#  - libvirt/
-#  - placement/
+  - openvswitch/
+  - libvirt/
+  - placement/
 #  - nova/
 #  - neutron/
 #  - horizon/
