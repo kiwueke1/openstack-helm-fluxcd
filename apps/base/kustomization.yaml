@@ -10,8 +10,8 @@ resources:
   - mariadb/
   - memecached/
   - keystone/
-#  - heat/
-#  - glance/
+  - heat/
+  - glance/
 #  - cinder/
 #  - openvswitch/
 #  - libvirt/
