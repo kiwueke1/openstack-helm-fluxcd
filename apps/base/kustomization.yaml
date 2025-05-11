@@ -3,7 +3,7 @@ resources:
   - ../../infrastructure/base
   - metallb-config/
   - openstack-ingress-service/
-  - rook-ceph/
+#  - rook-ceph/
 #  - ceph-adapter-rook/
   - node-init/
 #  - rabbitmq/
