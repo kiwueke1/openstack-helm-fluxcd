@@ -7,15 +7,15 @@ resources:
   - ceph-adapter-rook/
   - node-init/
   - rabbitmq/
-  - mariadb/
+#  - mariadb/
   - memecached/
-  - keystone/
-  - heat/
-  - glance/
-  - cinder/
-  - openvswitch/
-  - libvirt/
-  - placement/
-  - nova/
-  - neutron/
-  - horizon/
+#  - keystone/
+#  - heat/
+#  - glance/
+#  - cinder/
+#  - openvswitch/
+#  - libvirt/
+#  - placement/
+#  - nova/
+#  - neutron/
+#  - horizon/
