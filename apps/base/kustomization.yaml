@@ -6,7 +6,7 @@ resources:
 #  - rook-ceph/
   - ceph-adapter-rook/
   - node-init/
-#  - rabbitmq/
+  - rabbitmq/
 #  - mariadb/
 #  - memecached/
 #  - keystone/
