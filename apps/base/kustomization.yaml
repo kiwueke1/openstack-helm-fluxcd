@@ -11,7 +11,7 @@ resources:
   - memecached/
   - keystone/
   - heat/
-#  - glance/
+  - glance/
 #  - cinder/
 #  - openvswitch/
 #  - libvirt/
