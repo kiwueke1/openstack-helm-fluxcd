@@ -1,11 +1,11 @@
 resources:
   - namespaces/
-#  - ../../infrastructure/base
-#  - metallb-config/
-#  - openstack-ingress-service/
-#  - rook-ceph/
+  - ../../infrastructure/base
+  - metallb-config/
+  - openstack-ingress-service/
+  - rook-ceph/
 #  - ceph-adapter-rook/
-#  - node-init/
+  - node-init/
 #  - rabbitmq/
 #  - mariadb/
 #  - memecached/
