@@ -69,7 +69,7 @@ images:
     nova_api: quay.io/airshipit/nova:2024.1-ubuntu_jammy
     nova_cell_setup: quay.io/airshipit/nova:2024.1-ubuntu_jammy
     nova_cell_setup_init: quay.io/airshipit/heat:2024.1-ubuntu_jammy
-    nova_compute: quay.io/airshipit/nova:2025.1-ubuntu_noble
+    nova_compute: quay.io/airshipit/nova:2024.1-ubuntu_jammy
     nova_compute_ironic: 'docker.io/kolla/ubuntu-source-nova-compute-ironic:wallaby'
     nova_compute_ssh: quay.io/airshipit/nova:2024.1-ubuntu_jammy
     nova_conductor: quay.io/airshipit/nova:2024.1-ubuntu_jammy
@@ -990,7 +990,6 @@ conf:
     # List of directories to load filter definitions from (separated by ',').
     # These directories MUST all be only writeable by root !
     filters_path=/etc/nova/rootwrap.d,/usr/share/nova/rootwrap
-    transport_url = rabbit://nova:password@rabbitmq.openstack.svc.cluster.local:5672/nova
 
 
     # List of directories to search executables in, in case filters do not
