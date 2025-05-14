@@ -9,17 +9,17 @@ spec:
   timeout: 10m
   chart:
     spec:
-      chart: ./charts/mariadb
+      chart: mariadb
       sourceRef:
         kind: GitRepository
-        name: openstack-helm-fluxcd
+        name: openstack-helm
         namespace: flux-system
-      version: "2025.1.0"
+      version: "*"  # optional: use specific version tag if pinned
+  valuesFrom:
+    - kind: ConfigMap
+      name: mariadb-values-overrides  # this should contain merged output of helm osh get-values-overrides
+      valuesKey: values.yaml
   values:
     pod:
       replicas:
         server: 1
-    volume:
-      enabled: false
-      use_local_path_for_single_pod_cluster:
-        enabled: true
