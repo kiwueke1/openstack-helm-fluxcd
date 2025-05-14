@@ -9,7 +9,7 @@ spec:
   timeout: 10m
   chart:
     spec:
-      chart: mariadb
+      chart: ./charts/mariadb
       sourceRef:
         kind: GitRepository
         name: openstack-helm-fluxcd
