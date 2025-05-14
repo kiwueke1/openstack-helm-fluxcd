@@ -14,7 +14,6 @@ spec:
         kind: GitRepository
         name: openstack-helm
         namespace: flux-system
-      version: "*"  # optional: use specific version tag if pinned
   valuesFrom:
     - kind: ConfigMap
       name: mariadb-values-overrides  # this should contain merged output of helm osh get-values-overrides
