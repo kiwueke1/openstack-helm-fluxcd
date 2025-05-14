@@ -9,7 +9,7 @@
    - rabbitmq/
    - mariadb/
    - memecached/
-#   - keystone/
+   - keystone/
 #   - heat/
 #   - glance/
 #   - cinder/
