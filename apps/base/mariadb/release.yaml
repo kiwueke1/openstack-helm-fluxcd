@@ -12,7 +12,7 @@ spec:
       chart: mariadb
       sourceRef:
         kind: GitRepository
-        name: openstack-helm
+        name: openstack-helm-fluxcd
         namespace: flux-system
   values:
     pod:
