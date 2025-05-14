@@ -7,7 +7,7 @@
    - ceph-adapter-rook/
    - node-init/
    - rabbitmq/
-#   - mariadb/
+   - mariadb/
 #   - memecached/
 #   - keystone/
 #   - heat/
