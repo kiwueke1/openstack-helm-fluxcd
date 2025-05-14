@@ -8,7 +8,7 @@
    - node-init/
    - rabbitmq/
    - mariadb/
-#   - memecached/
+   - memecached/
 #   - keystone/
 #   - heat/
 #   - glance/
