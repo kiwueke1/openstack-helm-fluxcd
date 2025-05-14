@@ -4,6 +4,6 @@ resources:
   - repository.yaml
   - ingress-nginx-cluster.yaml
   - ingress-nginx-openstack.yaml
-  - ingress-nginx-ceph.yaml
+#  - ingress-nginx-ceph.yaml
 
   
