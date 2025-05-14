@@ -10,9 +10,9 @@
    - mariadb/
    - memecached/
    - keystone/
-#   - heat/
-#   - glance/
-#   - cinder/
+   - heat/
+   - glance/
+   - cinder/
 #   - openvswitch/
 #   - libvirt/
 #   - placement/
